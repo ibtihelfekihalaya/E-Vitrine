@@ -1,3 +1,0 @@
-evitrine_site_homepage:
-    path:     /
-    defaults: { _controller: EvitrineSiteBundle:Default:index }

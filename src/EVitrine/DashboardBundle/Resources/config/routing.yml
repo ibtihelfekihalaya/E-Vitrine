@@ -1,3 +1,7 @@
 e_vitrine_dashboard_homepage:
-    path:     /
+    path:     /index
     defaults: { _controller: EVitrineDashboardBundle:Default:index }
+   
+e_vitrine_dashboard_catalogue:
+    path:     /catalogue
+    defaults: { _controller: EVitrineDashboardBundle:Default:catalogue }

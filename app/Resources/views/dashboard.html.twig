@@ -9,30 +9,30 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
-<link href="{{asset('bundles/dashboard/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('dashboard/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="{{asset('bundles/dashboard/css/style.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('dashboard/css/style.css')}}" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="{{asset('bundles/dashboard/css/font-awesome.css')}}" rel="stylesheet"> 
+<link href="{{asset('dashboard/css/font-awesome.css')}}" rel="stylesheet"> 
 <!-- jQuery -->
 <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
 <!-- lined-icons -->
-<link rel="stylesheet" href="{{asset('bundles/dashboard/css/icon-font.min.css')}}" type='text/css' />
+<link rel="stylesheet" href="{{asset('dashboard/css/icon-font.min.css')}}" type='text/css' />
 <!-- //lined-icons -->
-<script src="{{asset('bundles/dashboard/js/jquery-1.10.2.min.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/amcharts.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/serial.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/light.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/radar.js')}}"></script>	
-<link href="{{asset('bundles/dashboard/css/barChart.css')}}" rel='stylesheet' type='text/css' />
-<link href="{{asset('bundles/dashboard/css/fabochart.css')}}" rel='stylesheet' type='text/css' />
+<script src="{{asset('dashboard/js/jquery-1.10.2.min.js')}}"></script>
+<script src="{{asset('dashboard/js/amcharts.js')}}"></script>	
+<script src="{{asset('dashboard/js/serial.js')}}"></script>	
+<script src="{{asset('dashboard/js/light.js')}}"></script>	
+<script src="{{asset('dashboard/js/radar.js')}}"></script>	
+<link href="{{asset('dashboard/css/barChart.css')}}" rel='stylesheet' type='text/css' />
+<link href="{{asset('dashboard/css/fabochart.css')}}" rel='stylesheet' type='text/css' />
 <!--clock init-->
-<script src="{{asset('bundles/dashboard/js/css3clock.js')}}"></script>
+<script src="{{asset('dashboard/js/css3clock.js')}}"></script>
 <!--Easy Pie Chart-->
 <!--skycons-icons-->
-<script src="{{asset('bundles/dashboard/js/skycons.js')}}"></script>
+<script src="{{asset('dashboard/js/skycons.js')}}"></script>
 
-<script src="{{asset('bundles/dashboard/js/jquery.easydropdown.js')}}"></script>
+<script src="{{asset('dashboard/js/jquery.easydropdown.js')}}"></script>
 
 <!--//skycons-icons-->
 </head> 
@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="left-content">
         <div class="inner-content">
            <!-- header-starts -->
-           {{render ( controller ('DepaniniUserBundle:Default:header'))}} 
+           {{render ( controller ('EVitrineDashboardBundle:Default:header'))}} 
            <!-- //header-ends -->
            <div class="outter-wp"> 
                 <!--//outer-wp-->
@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!--//content-inner-->
     <!--/sidebar-menu-->
-    {{render ( controller ("DepaniniUserBundle:Default:sideBar"))}}     
+    {{render ( controller ("EVitrineDashboardBundle:Default:sideBar"))}}     
     <div class="clearfix"></div>		
 </div>
 <script>
@@ -82,14 +82,14 @@ $("#menu span").css({"position":"relative"});
 });
 </script>
 <!--js -->
-<link rel="stylesheet" href="{{asset('bundles/dashboard/css/vroom.css')}}">
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/vroom.js')}}"></script>
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/TweenLite.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/CSSPlugin.min.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/jquery.nicescroll.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/scripts.js')}}"></script>
+<link rel="stylesheet" href="{{asset('dashboard/css/vroom.css')}}">
+<script type="text/javascript" src="{{asset('dashboard/js/vroom.js')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/TweenLite.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('dashboard/js/CSSPlugin.min.js')}}"></script>
+<script src="{{asset('dashboard/js/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('dashboard/js/scripts.js')}}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{asset('bundles/dashboard/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('dashboard/js/bootstrap.min.js')}}"></script>
 </body>
 </html>
