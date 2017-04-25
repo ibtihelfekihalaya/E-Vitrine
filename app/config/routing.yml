@@ -1,3 +1,7 @@
+e_vitrine_website:
+    resource: "@EVitrineWebsiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 e_vitrine_security_login:
     path:     /login
     defaults: { _controller: EVitrineDashboardBundle:Security:login }

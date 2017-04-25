@@ -63,7 +63,12 @@ class Product
      */
     private $tags;
 
-
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isVisible", type="boolean", nullable=false)
+     */
+    private $isVisible;
 
     /**
      * Get id
@@ -217,5 +222,29 @@ class Product
     public function getTags()
     {
         return $this->tags;
+    }
+
+    /**
+     * Set isVisible
+     *
+     * @param boolean $isVisible
+     *
+     * @return Product
+     */
+    public function setIsVisible($isVisible)
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    /**
+     * Get isVisible
+     *
+     * @return boolean
+     */
+    public function getIsVisible()
+    {
+        return $this->isVisible;
     }
 }

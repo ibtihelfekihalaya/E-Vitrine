@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new EVitrine\DashboardBundle\EVitrineDashboardBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new EVitrine\WebsiteBundle\EVitrineWebsiteBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

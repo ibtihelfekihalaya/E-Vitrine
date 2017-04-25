@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+{% block title %}E-Vitrine | Produits{% endblock %}
+{% block body %}
+    <div class="product">
+        <div class="container">
+            <div class="col-md-6 product-bottom">
+                <div class="col-md-6">
+                    <section  class="sky-form">
+                        <h4 class="cate">Filtrer</h4>
+                            <div class="row row1 scroll-pane">
+                                <div class="col col-4">
+                                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i> Tag 1</label>
+                                </div>
+                                <div class="col col-4">
+                                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tag 2</label>
+                                        <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tag 3</label>
+                                        
+                                </div>
+                            </div>
+                   </section>
+                </div>
+                <div class="col-md-6">
+                    <section  class="sky-form">
+                            <h4 class="cate">Trier par</h4>
+                                    <div class="row row1 scroll-pane">
+                                            <div class="col col-4">
+                                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Prix</label>
+                                            </div>
+                                            <div class="col col-4">
+                                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Poids</label>
+                                            </div>
+                                    </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-6 contact-top">
+                <form>
+                <div class="col-md-9">
+                    <input placeholder="Rechercher..." type="text" value="" autocomplete="on">
+                </div>
+                <div class="col-md-3">
+                    <label class="hvr-skew-backward" style="padding: 0.72em 1em;margin-left: 15px;margin-top: 5px">
+                                                <input type="submit" value="OK">
+                                </label>
+                </div>
+                </form>	
+
+            </div>
+            <div class="col-md-12">
+                {%for product in products %}
+                    <div class="mid-popular">
+                    <div class="col-md-3 item-grid1 simpleCart_shelfItem">
+                        <div class=" mid-pop">
+                            <div class="pro-img">
+                                    <img src="{{asset('website/images/pc.jpg')}}" class="img-responsive" alt="">
+                                    <div class="zoom-icon ">
+                                    <a class="picture" href="{{asset('website/images/pc.jpg')}}" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                    <a href="single.html"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="mid-1">
+                                <div class="women">
+                                <div class="women-top">
+                                    <h6>{{product.title}}</h6>
+                                    <p>{{product.details}}</p><br>
+                                    <p>{{product.tags}}</p><br>
+                                    <p>{{product.weight}} g</p>
+                                </div>
+                                    <div class="img item_add">
+                                        <a href="{{path('e_vitrine_website_product',{'id':product.id})}}">
+                                        <label class="hvr-skew-backward">
+                                           <i class="glyphicon glyphicon-menu-right icon"></i>
+                                </label>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="mid-2">
+                                    <p><em class="item_price">${{product.price}}</p>
+                                      
+                                        <div class="block">
+                                                <div class="starbox small ghosting"> </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                    </div>
+                     
+                           
+                    <div class="clearfix"></div>
+                </div>
+                {%endfor%}
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+
+    </div>
+{% endblock %}
+

@@ -12,7 +12,9 @@ class DefaultController extends Controller
     }
     public function catalogueAction()
     {
-        return $this->render('EVitrineDashboardBundle:Default:catalogue.html.twig');
+        $em= $this->getDoctrine()->getManager();
+        $products= $em->getRepository("EVitrineDashboardBundle:Product")->findAll();
+        return $this->render('EVitrineDashboardBundle:Default:catalogue.html.twig',array("products"=>$products));
     }
     public function headerAction()
     {

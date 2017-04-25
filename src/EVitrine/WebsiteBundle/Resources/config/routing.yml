@@ -1,0 +1,11 @@
+e_vitrine_website_homepage:
+    path:     /
+    defaults: { _controller: EVitrineWebsiteBundle:Default:index }
+
+e_vitrine_website_products:
+    path:     /Produits
+    defaults: { _controller: EVitrineWebsiteBundle:Default:products }
+    
+e_vitrine_website_product:
+    path:     /Produits/{id}/details
+    defaults: { _controller: EVitrineWebsiteBundle:Default:product }

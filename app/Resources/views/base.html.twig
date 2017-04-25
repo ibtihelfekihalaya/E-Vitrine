@@ -1,95 +1,98 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-
 <html>
 <head>
-<title>{% block title %}Welcome!{% endblock %}</title>
+<title>{%block title %} {%endblock %}</title>
+<link href="{{asset('website/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="{{asset('website/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Shopin Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndroId Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <!-- Bootstrap Core CSS -->
-<link href="{{asset('bundles/dashboard/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="{{asset('bundles/dashboard/css/style.css')}}" rel='stylesheet' type='text/css' />
-<!-- Graph CSS -->
-<link href="{{asset('bundles/dashboard/css/font-awesome.css')}}" rel="stylesheet"> 
-<!-- jQuery -->
-<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
-<!-- lined-icons -->
-<link rel="stylesheet" href="{{asset('bundles/dashboard/css/icon-font.min.css')}}" type='text/css' />
-<!-- //lined-icons -->
-<script src="{{asset('bundles/dashboard/js/jquery-1.10.2.min.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/amcharts.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/serial.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/light.js')}}"></script>	
-<script src="{{asset('bundles/dashboard/js/radar.js')}}"></script>	
-<link href="{{asset('bundles/dashboard/css/barChart.css')}}" rel='stylesheet' type='text/css' />
-<link href="{{asset('bundles/dashboard/css/fabochart.css')}}" rel='stylesheet' type='text/css' />
-<!--clock init-->
-<script src="{{asset('bundles/dashboard/js/css3clock.js')}}"></script>
-<!--Easy Pie Chart-->
-<!--skycons-icons-->
-<script src="{{asset('bundles/dashboard/js/skycons.js')}}"></script>
-
-<script src="{{asset('bundles/dashboard/js/jquery.easydropdown.js')}}"></script>
-
-<!--//skycons-icons-->
-</head> 
+<!--theme-style-->
+<link href="{{asset('website/css/style4.css')}}" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<script src="{{asset('website/js/jquery.min.js')}}"></script>
+<!--- start-rate---->
+<script src="{{asset('website/js/jstarbox.js')}}"></script>
+	<link rel="stylesheet" href="{{asset('website/css/jstarbox.css')}}" type="text/css" media="screen" charset="utf-8" />
+		<script type="text/javascript">
+			jQuery(function() {
+			jQuery('.starbox').each(function() {
+				var starbox = jQuery(this);
+					starbox.starbox({
+					average: starbox.attr('data-start-value'),
+					changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+					ghosting: starbox.hasClass('ghosting'),
+					autoUpdateAverage: starbox.hasClass('autoupdate'),
+					buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+					stars: starbox.attr('data-star-count') || 5
+					}).bind('starbox-value-changed', function(event, value) {
+					if(starbox.hasClass('random')) {
+					var val = Math.random();
+					starbox.next().text(' '+val);
+					return val;
+					} 
+				})
+			});
+		});
+		</script>
+<!---//End-rate---->
+<link href="{{asset('website/css/form.css')}}" rel="stylesheet" type="text/css" media="all" />
+</head>
 <body>
-<div class="page-container">
-<!--/content-inner-->
-    <div class="left-content">
-        <div class="inner-content">
-           <!-- header-starts -->
-           {{render ( controller ('DepaniniUserBundle:Default:header'))}} 
-           <!-- //header-ends -->
-           <div class="outter-wp"> 
-                <!--//outer-wp-->
-                {%block body %}
-                {%endblock%}
-           </div>
-           <!--footer section start-->
-           <footer>
-              <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
-           </footer>
-           <!--footer section end-->
-        </div>
-    </div>
-    <!--//content-inner-->
-    <!--/sidebar-menu-->
-    {{render ( controller ("DepaniniUserBundle:Default:sideBar"))}}     
-    <div class="clearfix"></div>		
-</div>
+
+	<!--content-->
+	{%block body %} {%endblock %}
+	<!--//content-->
+		<!--//footer-->
+	<div class="footer">
+			<div class="footer-bottom">
+				<div class="container">
+					
+					<p class="footer-class">&copy; 2016 Shopin. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--//footer-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<script src="{{asset('website/js/simpleCart.min.js')}}"> </script>
+<!-- slide -->
+<script src="{{asset('website/js/bootstrap.min.js')}}"></script>
+ <!--light-box-files -->
+		<script src="{{asset('website/js/jquery.chocolat.js')}}"></script>
+		<link rel="stylesheet" href="{{asset('website/css/chocolat.css')}}" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('a.picture').Chocolat();
+		});
+		</script>
+                <script src="{{asset('website/js/imagezoom.js')}}"></script>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script defer src="{{asset('website/js/jquery.flexslider.js')}}"></script>
+<link rel="stylesheet" href="{{asset('website/css/flexslider.css')}}" type="text/css" media="screen" />
+
 <script>
-var toggle = true;
-
-$(".sidebar-icon").click(function() {                
-if (toggle)
-{
-$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-                                    $("#menu span").css({"position":"absolute"});
-}
-else
-{
-$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-setTimeout(function() {
-$("#menu span").css({"position":"relative"});
-}, 400);
-}
-
-     toggle = !toggle;
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
 });
 </script>
-<!--js -->
-<link rel="stylesheet" href="{{asset('bundles/dashboard/css/vroom.css')}}">
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/vroom.js')}}"></script>
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/TweenLite.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('bundles/dashboard/js/CSSPlugin.min.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/jquery.nicescroll.js')}}"></script>
-<script src="{{asset('bundles/dashboard/js/scripts.js')}}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{{asset('bundles/dashboard/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

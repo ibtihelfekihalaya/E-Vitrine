@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+{% block title %}E-Vitrine | Produits{% endblock %}
+{% block body %}
+    <div class="single">
+
+<div class="container">
+<div class="col-md-12">
+	<div class="col-md-5 grid">		
+		<div class="flexslider">
+			  <ul class="slides">
+			    <li data-thumb="{{asset('website/images/si.jpg')}}">
+			        <div class="thumb-image"> <img src="{{asset('website/images/si.jpg')}}" data-imagezoom="true" class="img-responsive"> </div>
+			    </li>
+			    <li data-thumb="{{asset('website/images/si1.jpg')}}">
+			         <div class="thumb-image"> <img src="{{asset('website/images/si1.jpg')}}" data-imagezoom="true" class="img-responsive"> </div>
+			    </li>
+			    <li data-thumb="{{asset('website/images/si2.jpg')}}">
+			       <div class="thumb-image"> <img src="{{asset('website/images/si2.jpg')}}" data-imagezoom="true" class="img-responsive"> </div>
+			    </li> 
+			  </ul>
+		</div>
+	</div>	
+<div class="col-md-7 single-top-in">
+						<div class="span_2_of_a1 simpleCart_shelfItem">
+				<h3>{{product.title}}</h3>
+				<div class="price_single">
+				  <span class="reducedfrom item_price">${{product.price}}</span>
+				 
+				 <div class="clearfix"></div>
+				</div>
+				<h4 class="quick">Description:</h4>
+                                <p class="quick_desc">{{product.details}}</p> <br>
+                                <p class="quick_desc">Poids: {{product.weight}} g</p>
+                                
+                                <h4 class="quick">Catégories attachées:</h4>
+                                <p class="quick_desc">{{product.tags}}</p> <br>
+				 <div class="quantity"> 
+                                        <div class="quantity-select">                           
+                                                <div class="entry value-minus">&nbsp;</div>
+                                                <div class="entry value"><span>1</span></div>
+                                                <div class="entry value-plus active">&nbsp;</div>
+                                        </div>
+                                </div>
+                                <!--quantity-->
+	<script>
+    $('.value-plus').on('click', function(){
+    	var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+    	divUpd.text(newVal);
+    });
+
+    $('.value-minus').on('click', function(){
+    	var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+    	if(newVal>=1) divUpd.text(newVal);
+    });
+	</script>
+	<!--quantity-->
+				 
+			    <a href="#" class="add-to item_add hvr-skew-backward">Add to cart</a>
+			<div class="clearfix"> </div>
+			</div>
+		
+					</div>
+			<div class="clearfix"> </div>
+			
+</div>
+<!----->
+
+		<div class="clearfix"> </div>
+	</div>
+	
+		</div>	
+		
+{% endblock %}
+
