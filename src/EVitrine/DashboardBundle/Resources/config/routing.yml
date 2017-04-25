@@ -1,0 +1,3 @@
+e_vitrine_dashboard_homepage:
+    path:     /
+    defaults: { _controller: EVitrineDashboardBundle:Default:index }
