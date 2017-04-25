@@ -708,7 +708,7 @@ a.cart:hover{
 }
 /*--products--*/
 .product-bottom {
-    padding-top: 2em;
+    /*padding-top: 2em;*/
 }
 h4.cate {
     font-family: 'Ubuntu-Regular';

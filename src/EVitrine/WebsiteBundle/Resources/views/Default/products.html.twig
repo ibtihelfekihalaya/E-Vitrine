@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block title %}E-Vitrine | Produits{% endblock %}
 {% block body %}
-    <div class="product">
+    <div class="product" style="margin-bottom: 40px">
         <div class="container">
-            <div class="col-md-6 product-bottom">
+            <div class="col-md-6 product-bottom contact-top">
+                <form>
                 <div class="col-md-6">
                     <section  class="sky-form">
                         <h4 class="cate">Filtrer</h4>
@@ -32,17 +33,23 @@
                                     </div>
                     </section>
                 </div>
+                <div class="col-md-12">
+                     <label class="hvr-skew-backward pull-right">
+                                                <input type="submit" value="GO">
+                                </label>
+                </div>
+                </form>
             </div>
             <div class="col-md-6 contact-top">
                 <form>
-                <div class="col-md-9">
-                    <input placeholder="Rechercher..." type="text" value="" autocomplete="on">
-                </div>
-                <div class="col-md-3">
-                    <label class="hvr-skew-backward" style="padding: 0.72em 1em;margin-left: 15px;margin-top: 5px">
-                                                <input type="submit" value="OK">
-                                </label>
-                </div>
+                    <div class="col-md-9">
+                        <input placeholder="Rechercher..." type="text" value="" autocomplete="on">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="hvr-skew-backward" style="padding: 0.72em 1em;margin-left: 15px;margin-top: 5px">
+                                                    <input type="submit" value="OK">
+                                    </label>
+                    </div>
                 </form>	
 
             </div>
